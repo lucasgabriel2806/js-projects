@@ -8,6 +8,6 @@ Projetos que desenvolvi com JavaScript Vanilla (puro).
   
   Menu Restaurante
 
-  <img src="MenuRestaurante-Js/images/captura-de-tela" style="width: 500px" alt="Menu Restaurante">
+  <img src="MenuRestaurante-Js/images/captura-de-tela.png" style="width: 500px" alt="Menu Restaurante">
 
 </div>
