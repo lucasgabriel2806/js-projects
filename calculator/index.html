@@ -4,149 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');                
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;            
-            font-family: "Inter", sans-serif;
-        }
-
-        body {
-            height: 100vh;
-            background: #1A1A1A;    
-            color: #fff;                      
-            display: flex;
-            justify-content: center;
-            align-items: center;                  
-        }
-
-        .calculator {
-            background: #010101;
-            border-radius: 20px;
-            width: 320px;
-            height: 500px;
-            padding: 20px;
-        }
-
-        .result {
-            text-align: end;
-            margin-bottom: 16px;
-        }
-
-        .result .calculation-txt {
-            font-size: 32px;
-            margin-bottom: 12px;
-        }
-
-        .result .result-txt {
-            font-size: 24px;
-            color: #26A716;
-        }
-
-        .buttons {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .buttons > .row {
-            display: grid;
-            gap: 12px;
-            grid-template-columns: 60px 60px 60px 60px;
-        }
-
-        .buttons .row:first-child {
-            display: grid;
-            grid-template-columns: 132px 60px 60px;
-        }
-
-        .buttons .row:last-child {
-            display: grid;
-            grid-template-columns: 60px 60px 132px;
-        }
-
-        .buttons .row * {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 60px;
-            height: 60px;
-            border-radius: 100px;
-            font-size: 32px;        
-        }
-
-        .buttons .row .clear-all {
-            width: 132px;
-            text-transform: uppercase;            
-        }
-
-        .buttons .row .cleaners {
-            background: #2D2D2F;
-        }   
-
-        .buttons .row .operators {
-            background: #919191;
-            color: #000;
-        }
-
-        .buttons .row .numbers {
-            background: #171719;
-        }
-
-        .buttons .row .equals {
-            width: 132px;
-            background: #26A716;
-            color: #000;
-        }
-    </style>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="calculator">
 
-        <div class="result">
-            <p class="calculation-txt">1+2</p>
-            <p class="result-txt">3</p>
-        </div>
+        <div class="display"></div>
 
         <div class="buttons">
             <div class="row">
-                <div class="clear-all cleaners">Clear</div>
-                <div class="clear-one cleaners">&lt;</div>
-                <div class="division operators">/</div>
+                <button class="clear-all cleaners" onclick="clearAll()">Clear</button>
+                <button class="clear-one cleaners" onclick="clearOne()">&lt;</button>
+                <button class="division operators" onclick="appendOperator('/')">/</button>
             </div>
             <div class="row">
-                <div class="seven numbers">7</div>
-                <div class="eight numbers">8</div>
-                <div class="nine numbers">9</div>
-                <div class="multiplication operators">x</div>
+                <button class="seven numbers" onclick="appendNumber('7')">7</button>
+                <button class="eight numbers" onclick="appendNumber('8')">8</button>
+                <button class="nine numbers" onclick="appendNumber('9')">9</button>
+                <button class="multiplication operators" onclick="appendOperator('*')">&times;</button>
             </div>
             <div class="row">
-                <div class="four numbers">4</div>
-                <div class="fiv numbers">5</div>
-                <div class="six numbers">6</div>
-                <div class="minus operators">-</div>
+                <button class="four numbers" onclick="appendNumber('4')">4</button>
+                <button class="fiv numbers" onclick="appendNumber('5')">5</button>
+                <button class="six numbers" onclick="appendNumber('6')">6</button>
+                <button class="minus operators" onclick="appendOperator('-')">-</button>
             </div>
             <div class="row">
-                <div class="one numbers">1</div>
-                <div class="two numbers">2</div>
-                <div class="three numbers">3</div>
-                <div class="plus operators">+</div>
+                <button class="one numbers" onclick="appendNumber('1')">1</button>
+                <button class="two numbers" onclick="appendNumber('2')">2</button>
+                <button class="three numbers" onclick="appendNumber('3')">3</button>
+                <button class="plus operators" onclick="appendOperator('+')">+</button>
             </div>
             <div class="row">
-                <div class="zero numbers">0</div>
-                <div class="decimal-point numbers">.</div>
-                <div class="equals">=</div>
+                <button class="zero numbers" onclick="appendNumber('0')">0</button>
+                <button class="decimal-point numbers" onclick="appendOperator('.')">.</button>
+                <button class="equals" onclick="calculate()">=</button>
             </div>
         </div>
 
     </div>
+
+    <script src="script.js"></script>
     
 </body>
 </html>
