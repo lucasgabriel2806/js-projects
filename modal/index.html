@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="btn-modal" id="btn-modal" onclick="openModal()">
+        Click here to open modal
+    </div>
+
+    <div class="modal hidden" id="modal">
+        <svg onclick="closeModal()" xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 -960 960 960" width="36px" fill="#000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
+        <h1>Modal Title</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in quam non ipsum maximus iaculis. Aliquam vel diam quis nibh porta dignissim eu id urna. Praesent bibendum orci sed libero scelerisque tempus. Phasellus sit amet blandit tellus, et dignissim justo. Curabitur maximus lorem vitae urna tempus aliquam.</p>
+    </div>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>

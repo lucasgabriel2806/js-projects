@@ -23,6 +23,12 @@
 
 </a>
 
+<a href="https://lucasgabriel2806.github.io/js-projects/modal/">
+
+![print_tela](./assets/img/print_tela/modal.png)
+
+</a>
+
 <br><br>
 
 ## Tecnologias utilizadas
